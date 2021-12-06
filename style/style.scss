@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to right, #0B0B21 , #08083C, #08083C);
+}
+
+.content {
+  width: 40%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #5138a8;
+  margin: 0;
+  text-align: center;
+  font-size: 60px;
+  text-shadow: 2px 2px 4px #c4deff, -2px -2px 4px #c4deff, -2px 2px 4px #c4deff, 2px -2px 4px #c4deff;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin-top: 20px;
+  label {
+    padding: 10px 0;
+  }
+  input, select, div {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #5138a8;
+  }
+  .result {
+    background-color: #FFFFFF;;
+  }
+  #submit {
+    color: #FFFFFF;
+    background-color: #4B0082;
+  }
+  #error {
+    display: none;
+    border: none;
+    font-size: 20px;
+    color: #B22221;
+    margin: 0 0 10px 0;
+  }
+  span {
+    color: #4B0082;
+  }
+}
+
+.planet {
+  animation-name: planetMove;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 50%;
+}
+
+#canvas {
+  background: radial-gradient(ellipse at 70%, #82c4d1 18%, #06064e 57%, #0b0a1d 100%);
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#mercury {
+  animation-duration: 2s;
+}
+
+#venus {
+  animation-duration: 2.1s;
+}
+
+#earth {
+  animation-duration: 2.2s;
+}
+
+#mars {
+  animation-duration: 3.5s;
+}
+
+#jupiter {
+  animation-duration: 15s;
+}
+
+.saturn {
+  animation-duration: 30s;
+}
+
+#uranus {
+  animation-duration: 50s;
+}
+
+#neptune {
+  animation-duration: 80s;
+}
+
+#pluto {
+  animation-duration: 100s;
+}
+
+.star {
+  opacity: 0;
+  animation-name: starsFade;
+  animation-duration: (random(3) + 2) + s;
+  animation-iteration-count: infinite;
+}
+
+@for $j from 0 through 100 {
+  .star#{$j} {
+    animation-delay: random(10) + s;
+  }
+}
+
+@keyframes planetMove {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes starsFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+

@@ -1,0 +1,542 @@
+* {
+  box-sizing: border-box;
+  font-family: "Advent Pro", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to right, #0B0B21, #08083C, #08083C);
+}
+
+.content {
+  width: 40%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #5138a8;
+  margin: 0;
+  text-align: center;
+  font-size: 60px;
+  text-shadow: 2px 2px 4px #c4deff, -2px -2px 4px #c4deff, -2px 2px 4px #c4deff, 2px -2px 4px #c4deff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin-top: 20px;
+}
+.content label {
+  padding: 10px 0;
+}
+.content input, .content select, .content div {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #5138a8;
+}
+.content .result {
+  background-color: #FFFFFF;
+}
+.content #submit {
+  color: #FFFFFF;
+  background-color: #4B0082;
+}
+.content #error {
+  display: none;
+  border: none;
+  font-size: 20px;
+  color: #B22221;
+  margin: 0 0 10px 0;
+}
+.content span {
+  color: #4B0082;
+}
+
+.planet {
+  animation-name: planetMove;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 50%;
+}
+
+#canvas {
+  background: radial-gradient(ellipse at 70%, #82c4d1 18%, #06064e 57%, #0b0a1d 100%);
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#mercury {
+  animation-duration: 2s;
+}
+
+#venus {
+  animation-duration: 2.1s;
+}
+
+#earth {
+  animation-duration: 2.2s;
+}
+
+#mars {
+  animation-duration: 3.5s;
+}
+
+#jupiter {
+  animation-duration: 15s;
+}
+
+.saturn {
+  animation-duration: 30s;
+}
+
+#uranus {
+  animation-duration: 50s;
+}
+
+#neptune {
+  animation-duration: 80s;
+}
+
+#pluto {
+  animation-duration: 100s;
+}
+
+.star {
+  opacity: 0;
+  animation-name: starsFade;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.star0 {
+  animation-delay: 7s;
+}
+
+.star1 {
+  animation-delay: 3s;
+}
+
+.star2 {
+  animation-delay: 1s;
+}
+
+.star3 {
+  animation-delay: 4s;
+}
+
+.star4 {
+  animation-delay: 8s;
+}
+
+.star5 {
+  animation-delay: 4s;
+}
+
+.star6 {
+  animation-delay: 3s;
+}
+
+.star7 {
+  animation-delay: 3s;
+}
+
+.star8 {
+  animation-delay: 1s;
+}
+
+.star9 {
+  animation-delay: 1s;
+}
+
+.star10 {
+  animation-delay: 1s;
+}
+
+.star11 {
+  animation-delay: 8s;
+}
+
+.star12 {
+  animation-delay: 4s;
+}
+
+.star13 {
+  animation-delay: 9s;
+}
+
+.star14 {
+  animation-delay: 3s;
+}
+
+.star15 {
+  animation-delay: 9s;
+}
+
+.star16 {
+  animation-delay: 2s;
+}
+
+.star17 {
+  animation-delay: 7s;
+}
+
+.star18 {
+  animation-delay: 2s;
+}
+
+.star19 {
+  animation-delay: 2s;
+}
+
+.star20 {
+  animation-delay: 10s;
+}
+
+.star21 {
+  animation-delay: 8s;
+}
+
+.star22 {
+  animation-delay: 7s;
+}
+
+.star23 {
+  animation-delay: 7s;
+}
+
+.star24 {
+  animation-delay: 8s;
+}
+
+.star25 {
+  animation-delay: 2s;
+}
+
+.star26 {
+  animation-delay: 10s;
+}
+
+.star27 {
+  animation-delay: 3s;
+}
+
+.star28 {
+  animation-delay: 1s;
+}
+
+.star29 {
+  animation-delay: 9s;
+}
+
+.star30 {
+  animation-delay: 4s;
+}
+
+.star31 {
+  animation-delay: 6s;
+}
+
+.star32 {
+  animation-delay: 5s;
+}
+
+.star33 {
+  animation-delay: 3s;
+}
+
+.star34 {
+  animation-delay: 6s;
+}
+
+.star35 {
+  animation-delay: 5s;
+}
+
+.star36 {
+  animation-delay: 5s;
+}
+
+.star37 {
+  animation-delay: 4s;
+}
+
+.star38 {
+  animation-delay: 5s;
+}
+
+.star39 {
+  animation-delay: 6s;
+}
+
+.star40 {
+  animation-delay: 2s;
+}
+
+.star41 {
+  animation-delay: 1s;
+}
+
+.star42 {
+  animation-delay: 10s;
+}
+
+.star43 {
+  animation-delay: 2s;
+}
+
+.star44 {
+  animation-delay: 8s;
+}
+
+.star45 {
+  animation-delay: 4s;
+}
+
+.star46 {
+  animation-delay: 3s;
+}
+
+.star47 {
+  animation-delay: 10s;
+}
+
+.star48 {
+  animation-delay: 3s;
+}
+
+.star49 {
+  animation-delay: 10s;
+}
+
+.star50 {
+  animation-delay: 6s;
+}
+
+.star51 {
+  animation-delay: 3s;
+}
+
+.star52 {
+  animation-delay: 2s;
+}
+
+.star53 {
+  animation-delay: 7s;
+}
+
+.star54 {
+  animation-delay: 1s;
+}
+
+.star55 {
+  animation-delay: 3s;
+}
+
+.star56 {
+  animation-delay: 9s;
+}
+
+.star57 {
+  animation-delay: 2s;
+}
+
+.star58 {
+  animation-delay: 5s;
+}
+
+.star59 {
+  animation-delay: 10s;
+}
+
+.star60 {
+  animation-delay: 3s;
+}
+
+.star61 {
+  animation-delay: 6s;
+}
+
+.star62 {
+  animation-delay: 9s;
+}
+
+.star63 {
+  animation-delay: 10s;
+}
+
+.star64 {
+  animation-delay: 7s;
+}
+
+.star65 {
+  animation-delay: 10s;
+}
+
+.star66 {
+  animation-delay: 1s;
+}
+
+.star67 {
+  animation-delay: 3s;
+}
+
+.star68 {
+  animation-delay: 4s;
+}
+
+.star69 {
+  animation-delay: 7s;
+}
+
+.star70 {
+  animation-delay: 9s;
+}
+
+.star71 {
+  animation-delay: 1s;
+}
+
+.star72 {
+  animation-delay: 3s;
+}
+
+.star73 {
+  animation-delay: 7s;
+}
+
+.star74 {
+  animation-delay: 9s;
+}
+
+.star75 {
+  animation-delay: 10s;
+}
+
+.star76 {
+  animation-delay: 7s;
+}
+
+.star77 {
+  animation-delay: 3s;
+}
+
+.star78 {
+  animation-delay: 7s;
+}
+
+.star79 {
+  animation-delay: 5s;
+}
+
+.star80 {
+  animation-delay: 8s;
+}
+
+.star81 {
+  animation-delay: 7s;
+}
+
+.star82 {
+  animation-delay: 7s;
+}
+
+.star83 {
+  animation-delay: 10s;
+}
+
+.star84 {
+  animation-delay: 5s;
+}
+
+.star85 {
+  animation-delay: 1s;
+}
+
+.star86 {
+  animation-delay: 5s;
+}
+
+.star87 {
+  animation-delay: 8s;
+}
+
+.star88 {
+  animation-delay: 5s;
+}
+
+.star89 {
+  animation-delay: 9s;
+}
+
+.star90 {
+  animation-delay: 2s;
+}
+
+.star91 {
+  animation-delay: 2s;
+}
+
+.star92 {
+  animation-delay: 6s;
+}
+
+.star93 {
+  animation-delay: 3s;
+}
+
+.star94 {
+  animation-delay: 2s;
+}
+
+.star95 {
+  animation-delay: 5s;
+}
+
+.star96 {
+  animation-delay: 4s;
+}
+
+.star97 {
+  animation-delay: 5s;
+}
+
+.star98 {
+  animation-delay: 7s;
+}
+
+.star99 {
+  animation-delay: 3s;
+}
+
+.star100 {
+  animation-delay: 1s;
+}
+
+@keyframes planetMove {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes starsFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
